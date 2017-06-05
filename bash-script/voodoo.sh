@@ -15,8 +15,8 @@
 
 set -e
 
-VERSION="1.11.2"
-IMAGE="voodoo:3.0"
+VERSION="1.0"
+IMAGE="magnuscolors/voodindock:latest"
 VD_USER="voodoo"
 VD_SCRIPT="/opt/bin/voodoo"
 DOCKERID=$(id -g "docker")
