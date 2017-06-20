@@ -23,7 +23,8 @@ RUN set -ex; \
 
 RUN pip install voodoo-cli
 
-RUN sed -i -e "s/client = docker.from_env()/client= docker.from_env(version='auto')/g" /usr/local/lib/python2.7/dist-packages/voodoo/main.py
+RUN sed -i -e "s/client = docker.from_env()/client= docker.from_env(version='auto')/g" /usr/local/lib/python2.7/dist-packages/voodoo/main.py && \
+    sed -i -e "s/github.com\/akretion\/voodoo-template.git/github.com\/whulshof\/voodoo-template.git/g" /usr/local/lib/python2.7/dist-packages/voodoo/main.py
 
 #RUN groupadd docker
 
