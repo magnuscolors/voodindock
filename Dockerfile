@@ -21,10 +21,11 @@ RUN set -ex; \
 RUN set -ex; \
     curl -L https://bootstrap.pypa.io/get-pip.py | python
 
-RUN pip install voodoo-cli
+# RUN pip install git+https://github.com/whulshof/voodoo.git@voodindock
+RUN pip install https://github.com/whulshof/voodoo/archive/voodindock.zip
 
-RUN sed -i -e "s/client = docker.from_env()/client= docker.from_env(version='auto')/g" /usr/local/lib/python2.7/dist-packages/voodoo/main.py && \
-    sed -i -e "s/github.com\/akretion\/voodoo-template.git/github.com\/whulshof\/voodoo-template.git/g" /usr/local/lib/python2.7/dist-packages/voodoo/main.py
+# RUN sed -i -e "s/client = docker.from_env()/client= docker.from_env(version='auto')/g" /usr/local/lib/python2.7/dist-packages/voodoo/main.py && \
+#    sed -i -e "s/github.com\/akretion\/voodoo-template.git/github.com\/whulshof\/voodoo-template.git/g" /usr/local/lib/python2.7/dist-packages/voodoo/main.py
 
 #RUN groupadd docker
 
