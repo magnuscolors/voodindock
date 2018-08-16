@@ -7,6 +7,7 @@ $ curl -L --fail https://github.com/whulshof/voodindock/releases/download/v1.1/v
 $ sudo chmod +x /opt/bin/voodoo
 
 Execute following commands to install voodoo in a container on MacOS
-$ curl -L --fail https://github.com/whulshof/voodindock/releases/download/v1.1/voodoo-macos.sh > /usr/local/bin/voodoo
+$ curl -L --fail https://github.com/whulshof/voodindock/releases/download/v1.1/voodoo-macos.sh > ~/voodoo
+$ sudo mv ~/voodoo /usr/local/bin/
 $ sudo chmod +x /usr/local/bin/voodoo
 
